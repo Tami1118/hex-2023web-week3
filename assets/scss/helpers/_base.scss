@@ -1,0 +1,59 @@
+*, *::after, *::before{
+  box-sizing: border-box;
+  outline: 1px solid indigo;
+}
+
+body{
+  font-family: 'Noto Sans TC', 'Roboto', sans-serif;
+  line-height: 1.2;
+}
+
+img{
+  max-width: 100%;
+  height: auto;
+}
+
+img, svg{
+  vertical-align: middle;
+}
+
+a{
+  text-decoration: none;
+
+  &:hover{
+    cursor: pointer;
+  }
+}
+
+a, button{
+  font-family: inherit;
+}
+
+.container{
+  max-width: 1296px;
+  margin: 0 auto;
+}
+
+.flex{
+  display: flex;
+}
+
+.flex-wrap{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex-between{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.material-symbols-outlined{
+  font-size: 48px;
+  font-variation-settings:
+  'FILL' ,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
