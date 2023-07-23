@@ -1,3 +1,20 @@
 .footer{
   background: $primary;
+
+  a{
+    color: inherit;
+  }
+
+  .nav{
+    li~li{
+      margin-left: 48px;
+    }
+  }
+
+  .media{
+    li~li{
+      margin-left: 16px;
+    }
+  }
+
 }

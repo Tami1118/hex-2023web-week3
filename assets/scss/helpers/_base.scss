@@ -1,6 +1,6 @@
 *, *::after, *::before{
   box-sizing: border-box;
-  outline: 1px solid indigo;
+  // outline: 1px solid indigo;
 }
 
 body{
@@ -20,6 +20,12 @@ img, svg, span{
 a{
   text-decoration: none;
 
+  &:hover{
+    cursor: pointer;
+  }
+}
+
+button{
   &:hover{
     cursor: pointer;
   }
@@ -94,10 +100,22 @@ a, button{
   margin-bottom: 48px;
 }
 
+.py-12{
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
 
 .py-40{
   padding-top: 40px;
   padding-bottom: 40px;
+}
+
+.pt-48{
+  padding-top: 48px;
+}
+
+.pb-32{
+  padding-bottom: 32px;
 }
 
 .py-64{
