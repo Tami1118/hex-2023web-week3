@@ -1,0 +1,13 @@
+.series{
+  li{
+    max-width: 336px;
+  }
+}
+
+@media(min-width: 1295px){
+  .series{
+    li{
+      max-width: 416px;
+    }
+  }
+}

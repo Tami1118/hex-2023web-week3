@@ -8,12 +8,12 @@ body{
   line-height: 1.2;
 }
 
-img{
+img, picture{
   max-width: 100%;
   height: auto;
 }
 
-img, svg{
+img, svg, span{
   vertical-align: middle;
 }
 
@@ -25,6 +25,10 @@ a{
   }
 }
 
+a,span{
+  display: block;
+}
+
 a, button{
   font-family: inherit;
 }
@@ -34,26 +38,90 @@ a, button{
   margin: 0 auto;
 }
 
+@media(max-width: 1296px){
+  .container{
+    padding: 0 36px;
+  }
+}
+
+.btn{
+  background-color: none;
+  border: none;
+  text-align: center;
+}
+
 .flex{
   display: flex;
 }
 
-.flex-wrap{
-  display: flex;
-  flex-wrap: wrap;
+.block{
+  display: block;
 }
 
-.flex-between{
-  display: flex;
+.inline-block{
+  display: inline-block;
+}
+
+.direction-column{
+  flex-direction: column;
+}
+
+.justify-between{
   justify-content: space-between;
+}
+
+.justify-center{
+  justify-content: center;
+}
+
+.justify-end{
+  justify-content: end;
+}
+
+.items-center{
   align-items: center;
 }
 
-.material-symbols-outlined{
-  font-size: 48px;
-  font-variation-settings:
-  'FILL' ,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 48
+.items-end{
+  align-items: flex-end;
+}
+
+.m-auto{
+  margin: 0 auto;
+}
+
+.mb-48{
+  margin-bottom: 48px;
+}
+
+
+.py-40{
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.py-64{
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
+
+.py-80{
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.bg-primary{
+  background-color: $primary;
+}
+
+.bg-secondary{
+  background-color: $secondary;
+}
+
+.text-red-dark{
+  color: $red-dark;
+}
+
+.text-white{
+  color: white;
 }

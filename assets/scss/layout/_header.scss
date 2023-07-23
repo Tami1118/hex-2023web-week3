@@ -1,4 +1,16 @@
 .header{
   background: $primary;
-  font-size: 64px;
+
+  &-logo{
+    width: 80px;
+  }
+
+  a{
+    color: $white;
+    font-size: 20px;
+  }
+
+  li~li{
+    margin-left: 64px;
+  }
 }

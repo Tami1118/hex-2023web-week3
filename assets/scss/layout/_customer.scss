@@ -1,0 +1,45 @@
+.customer{
+  ul{
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  li{
+    width: 48%;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0px 2px 6px $gray;
+  }
+
+  li:nth-child(-n+2){
+    margin-bottom: 24px;
+  }
+
+  .content{
+    height: 205px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  h3{
+    margin-bottom: 8px;
+  }
+
+  span{
+    margin-top: auto;
+    color: $gray-dark;
+  }
+}
+
+@media(min-width: 1296px){
+  .customer{
+    li{
+      width: 24%;
+    }
+
+    li:nth-child(-n+2){
+      margin-bottom: 0;
+    }
+  }
+}
