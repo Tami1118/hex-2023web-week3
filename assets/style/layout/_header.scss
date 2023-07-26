@@ -1,20 +1,45 @@
 .l-header{
-  
+  background-color: $primary;
 }
 
-.header{
-  background: $primary;
+.l-header__logo{
+  padding: 16px;
+}
 
-  &-logo{
-    width: 80px;
+.l-header__logo-link{
+  width: 80px;
+}
+
+.l-header__menu-list{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.l-header__menu-item{
+  width: 50%;
+  text-align: center;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  color: $white;
+  border: .5px solid #fff;
+}
+
+@media(min-width: 767px){
+  .l-header__container{
+    padding-right: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 
-  a{
-    color: $white;
-    font-size: 20px;
+  .l-header__menu-list{
+    li~li{
+      margin-left: 64px;
+    }
   }
-
-  li~li{
-    margin-left: 64px;
+  
+  .l-header__menu-item{
+    width: fit-content;
+    border: none;
   }
 }

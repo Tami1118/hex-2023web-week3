@@ -1,20 +1,40 @@
-.footer{
-  background: $primary;
+.l-footer{
+  background-color: $primary;
+}
 
-  a{
-    color: inherit;
+.l-footer-container{
+  padding: 0 16px;
+  
+}
+
+.l-footer-top{
+  display: flex;
+  justify-content: space-between;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #fff;
+}
+
+.l-footer-left{
+  color: $white;
+}
+
+.l-footer-nav__list{
+  display: none;
+}
+
+.l-footer-media{
+  display: flex;
+
+  li{
+    width: 24px;
   }
 
-  .nav{
-    li~li{
-      margin-left: 48px;
-    }
+  li~li{
+    margin-left: 8px;
   }
 
-  .media{
-    li~li{
-      margin-left: 16px;
-    }
+  svg{
+    max-width: 100%;
   }
-
 }
