@@ -5,34 +5,53 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>index</title>
-    <script type="module" crossorigin src="/hex-2023web-week3/assets/main-db2fdb87.js"></script>
-    <link rel="stylesheet" href="/hex-2023web-week3/assets/main-70cb4efc.css">
+    <script type="module" crossorigin src="/hex-2023web-week3/assets/main-b889bceb.js"></script>
+    <link rel="stylesheet" href="/hex-2023web-week3/assets/main-087b85a0.css">
   </head>
   <body>
-    <header class="header">
-  <div class="container flex justify-between items-center py-12">
-    <div class="header-logo">
-      <img src="https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/logo-white.png?raw=true" alt="">
+    <header class="l-header">
+  <div class="l-header__container">
+    <div class="l-header__logo">
+      <a class="l-header__logo-link" href="index.html">
+        <img src="https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/logo-white.png?raw=true" alt="">
+      </a>
     </div>
-    <ul class="flex">
-      <li><a href="products.html">系列鏡框</a></li>
-      <li><a href="stores.html">門市據點</a></li>
-      <li><a href="blogs.html">部落格</a></li>
-      <li><a href="faq.html">常見問題</a></li>
+    <ul class="l-header__menu-list">
+      <li class="l-header__menu-item"><a class="block" href="products.html">系列鏡框</a></li>
+      <li class="l-header__menu-item"><a class="block" href="stores.html">門市據點</a></li>
+      <li class="l-header__menu-item"><a class="block" href="blogs.html">部落格</a></li>
+      <li class="l-header__menu-item"><a class="block" href="faq.html">常見問題</a></li>
     </ul>
   </div>
-</header>    <p style="font-size: 48px">我是 store</p>    <footer class="footer container">
-  <div class="container pt-48 pb-32 text-white">
-    <div class="flex justify-between items-center">
-      <ul class="nav flex">
-        <li><a href="#">首頁</a></li>
-        <li><a href="#">系列鏡框</a></li>
-        <li><a href="#">門市據點</a></li>
-        <li><a href="#">部落格</a></li>
-        <li><a href="#">常見問題</a></li>
-      </ul>
+</header>    <p style="font-size: 48px">我是 store</p>    <footer class="l-footer">
+  <div class="l-footer-container">
+    <div class="l-footer-top">
+      <div class="l-footer-left">
+        <ul class="l-footer-nav__list">
+          <li class="l-footer-nav__item"><a href="#">首頁</a></li>
+          <li class="l-footer-nav__item"><a href="#">系列鏡框</a></li>
+          <li class="l-footer-nav__item"><a href="#">門市據點</a></li>
+          <li class="l-footer-nav__item"><a href="#">部落格</a></li>
+          <li class="l-footer-nav__item"><a href="#">常見問題</a></li>
+        </ul>
+  
+        <ul class="l-footer-info__list">
+          <li class="l-footer-nav__item">
+            <span class="material-symbols-outlined">
+              call
+            </span>
+            <a href="tel: 0800000000">0800-000-000</a>
+          </li>
+          <li class="l-footer-nav__item">
+            <span class="material-symbols-outlined">
+              mail
+            </span>
+            <a href="mail: glasses@business.com">0800-000-000</a>
+          </li>
+        </ul>
+      </div>
 
-      <ul class="media flex">
+      <ul class="l-footer-media">
         <li><a href="#">
             <svg id="ic_social_fb" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="48" height="48" viewBox="0 0 48 48">
               <defs>
@@ -71,7 +90,7 @@
                 </g>
               </g>
             </svg>
-
+  
           </a></li>
         <li><a href="#">
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="48" height="48" viewBox="0 0 48 48">
@@ -105,6 +124,12 @@
           </a></li>
       </ul>
     </div>
+
+    <div class="l-footer-bottom">
+      <p>Copyright © 2020 Glasses.All rights reserved.</p>
+    </div>
+
+
   </div>
 </footer>
     
