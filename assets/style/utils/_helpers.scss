@@ -1,104 +1,42 @@
-.container{
-  max-width: 1296px;
-  margin: 0 auto;
+// mobile px-16 -> pad px-36 -> web no-px
+.container-main{
+  max-width: 100%;
+  padding-left: 16px;
+  padding-right: 16px;
+
+  @include pad{
+    padding-left: 36px;
+    padding-right: 36px;
+  }
+  
+  @include pc{
+    max-width: $container;
+    padding-left: 0;
+    padding-right: 0;
+    margin: 0 auto;
+  }
 }
 
-@media(max-width: 1296px){
-  .container{
-    padding: 0 36px;
+// mobile no-px -> pad px-36 -> web no-px
+.container-full{
+  max-width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+
+  @include pad{
+    padding-left: 36px;
+    padding-right: 36px;
+  }
+  
+  @include pc{
+    max-width: $container;
+    padding-left: 0;
+    padding-right: 0;
+    margin: 0 auto;
   }
 }
 
 .btn{
-  background-color: none;
   border: none;
   text-align: center;
-}
-
-.flex{
-  display: flex;
-}
-
-.block{
-  display: block;
-}
-
-.inline-block{
-  display: inline-block;
-}
-
-.direction-column{
-  flex-direction: column;
-}
-
-.justify-between{
-  justify-content: space-between;
-}
-
-.justify-center{
-  justify-content: center;
-}
-
-.justify-end{
-  justify-content: end;
-}
-
-.items-center{
-  align-items: center;
-}
-
-.items-end{
-  align-items: flex-end;
-}
-
-.m-auto{
-  margin: 0 auto;
-}
-
-.mb-48{
-  margin-bottom: 48px;
-}
-
-.py-12{
-  padding-top: 12px;
-  padding-bottom: 12px;
-}
-
-.py-40{
-  padding-top: 40px;
-  padding-bottom: 40px;
-}
-
-.pt-48{
-  padding-top: 48px;
-}
-
-.pb-32{
-  padding-bottom: 32px;
-}
-
-.py-64{
-  padding-top: 64px;
-  padding-bottom: 64px;
-}
-
-.py-80{
-  padding-top: 80px;
-  padding-bottom: 80px;
-}
-
-.bg-primary{
-  background-color: $primary;
-}
-
-.bg-secondary{
-  background-color: $secondary;
-}
-
-.text-red-dark{
-  color: $red-dark;
-}
-
-.text-white{
-  color: white;
 }

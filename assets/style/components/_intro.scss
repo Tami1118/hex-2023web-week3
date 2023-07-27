@@ -1,0 +1,49 @@
+.intro{
+  background-color: $secondary;
+}
+
+[class$="feature-item"]{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.intro__feature-list{
+  gap: 24px;
+
+  @include pad{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+.intro__feature-item:not(first-child){
+  margin-bottom: 32px;
+
+  @include pad{
+    margin-bottom: 0;
+  }
+}
+
+.intro__feature-item{
+  @include pad{
+    width: calc((100% - 24px)/ 2);
+  }
+  @include pc{
+    width: calc((100% - 24px * 3)/ 4);
+  }
+}
+
+.intro__feature-icon{
+  font-size: 84px;
+  color: $red-dark;
+  margin-bottom: 24px;
+}
+
+.intro__feature-title{
+  font-size: 24px;
+  font-weight: bold;
+  color: $red-dark;
+  margin-bottom: 8px;
+}

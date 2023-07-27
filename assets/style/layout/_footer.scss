@@ -1,40 +1,117 @@
-.l-footer{
+.footer{
   background-color: $primary;
+
+  [class*="-item"]{
+    color: white;
+    &:hover{
+      color: $green-light;
+    }
+  }
 }
 
-.l-footer-container{
-  padding: 0 16px;
-  
-}
-
-.l-footer-top{
-  display: flex;
-  justify-content: space-between;
+.footer__top{
   padding-top: 24px;
   padding-bottom: 24px;
   border-bottom: 1px solid #fff;
-}
-
-.l-footer-left{
-  color: $white;
-}
-
-.l-footer-nav__list{
-  display: none;
-}
-
-.l-footer-media{
   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  @include pad{
+    flex-direction: column;
+  }
+}
 
-  li{
-    width: 24px;
+.footer__top-nav{
+  order: 1;
+  display: flex;
+  justify-content: space-between;
+  @include pad{
+    order: -1;
+  }
+}
+
+.footer__nav-list{
+  display: none;
+  @include pad{
+    display: flex;
   }
 
   li~li{
-    margin-left: 8px;
+    @include pad{
+      margin-left: 48px;
+    }
+  }
+}
+
+.footer__social-list{
+  display: flex;
+
+  li~li{
+    margin-left: 16px;
+    @include pad{
+      margin-left: 20px;
+    }
+  }
+}
+
+.footer__social-item{
+  width: 24px;
+}
+
+.footer__info-list{
+  @include pad{
+    margin-top: 32px;
   }
 
-  svg{
-    max-width: 100%;
+  li~li{
+    margin-top: 8px;
+  }
+}
+
+.footer__info-item{
+  display: flex;
+}
+
+.footer__info-link{
+  margin-left: 12px;
+  @include pad{
+    font-size: 36px;
+  }
+}
+
+.footer__info-icon{
+  font-size: 18px;
+  @include pad{
+    font-size: 36px;
+  }
+}
+
+.footer__bottom{
+  padding-top: 16px;
+  padding-bottom: 24px;
+  @include pad{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  span {
+    color: white;
+  }
+}
+
+.footer__terms-list{
+  margin-top: 8px;
+  @include pad{
+    margin-top: 0;
+    display: flex;
+  }
+
+  li~li{
+    margin-top: 8px;
+    @include pad{
+      margin-top: 0;
+      margin-left: 48px;
+    }
   }
 }

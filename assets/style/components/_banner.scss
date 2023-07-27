@@ -1,32 +1,42 @@
-.banner{
-  background: url('https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/home-header.png?raw=true') no-repeat center center / cover;
-
-  .container{ /* 需設定高把高撐高，才能設定主軸及交錯軸 */
-    height: 787px;
-  }
-
-  h2{
-    color: $red-dark;
-    font-size: 64px;
-    font-weight: bold;
-  }
-
-  p{
-    color: $red-dark;
-    font-size: 36px;
-    order: -1;
-  }
-
-  button{
-    background-color: $primary;
-    color: $white;
-    padding: 6px 12px;
-    margin-top: 4px;
+.banner {
+  background: url('https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/home-header-sm.png?raw=true') no-repeat center center / cover;
+  @include pad {
+    background: url('https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/home-header.png?raw=true') no-repeat center center / cover;
   }
 }
 
-@media(max-width: 1296px){
-  .banner{
-    background: url('https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/home-header-sm.png?raw=true') no-repeat center center / cover;
+.banner__frame {
+  /* 需設定高把高撐高，才能設定主軸及交錯軸 */
+  height: 396px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  @include pad {
+    height: 787px;
   }
+}
+
+.banner__title {
+  font-size: 24px;
+  color: $red-dark;
+  font-weight: bold;
+  @include pad {
+    font-size: 64px;
+  }
+}
+
+.banner__slogan {
+  color: $red-dark;
+  order: -1;
+  @include pad {
+    font-size: 36px;
+  }
+}
+
+.btn-primary {
+  @include button($primary, white);
+  padding: 6px 12px;
+  margin-top: 4px;
+  font-size: 20px;
 }

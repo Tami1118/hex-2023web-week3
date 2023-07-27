@@ -1,11 +1,13 @@
-@mixin pad{
-  @media(min-width: 767px){
+// mobile first
+
+@mixin pc{
+  @media(min-width: 1296px){
     @content
   }
 };
 
-@mixin mobile{
-  @media(min-width: 576px){
+@mixin pad{
+  @media(min-width: 767px){
     @content
   }
 };
