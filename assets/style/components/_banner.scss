@@ -34,9 +34,12 @@
   }
 }
 
-.btn-primary {
+.banner__btn {
   @include button($primary, white);
-  padding: 6px 12px;
   margin-top: 4px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-right: 12px;
+  padding-left: 12px;
   font-size: 20px;
 }

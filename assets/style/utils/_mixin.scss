@@ -1,19 +1,25 @@
 // mobile first
-
-@mixin pc{
-  @media(min-width: 1296px){
+@mixin pc {
+  @media(min-width: 992px) {
     @content
   }
 };
 
-@mixin pad{
-  @media(min-width: 767px){
+@mixin pad {
+  @media(min-width: 768px) {
     @content
   }
 };
 
-@mixin button($background, $color){
+@mixin button($background, $color) {
   background-color: $background;
   color: $color;
   text-align: center;
 };
+
+@mixin ellipsis($line) {
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $line;
+}
