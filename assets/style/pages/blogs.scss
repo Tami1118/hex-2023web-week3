@@ -1,0 +1,69 @@
+.p-blog-frame{
+  padding-top: 40px;
+  padding-bottom: 64px;
+}
+
+.p-blog-card__group{
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.p-blog-card-frame{
+  @include pad{
+    display: flex;
+    gap: 24px;
+  }
+}
+
+.p-main__title{
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 24px;
+  padding-left: 16px;
+  border-left: 8px solid $primary;
+}
+
+.p-blog-card{
+  &__pic{
+    max-height: 208px; /* 設定最大高度，縮小時會隨圖片一起變小 */
+    overflow: hidden; /* 圖片超出隱藏 */
+    margin-bottom: 8px;
+    @include pad{
+      max-height: 400px;
+      width: 636px; /* 固定寬 */
+      margin-bottom: 0;
+    }
+  }
+
+  &__body{
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title{
+    font-size: 24px;
+    color: $red-dark;
+  }
+  &__info{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__text{
+    display: none;
+    @include pad{
+      display: block;
+    }
+  }
+  &__link{
+    display: none;
+    @include pad{
+      display: block;
+      margin-top: auto;
+      margin-left: auto;
+      width: fit-content;
+    }
+  }
+}
