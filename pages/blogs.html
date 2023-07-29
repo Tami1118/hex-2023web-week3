@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>眼鏡官網｜部落格</title>
+  </head>
+  <body>
+    <%- include('./layout/header'); -%>
+
+    <main>
+      <h2 class="p__main-title">
+        部落格
+      </h2>
+      <ul class="p-blog-order">
+        <li class="p-blog-list">
+          <a class="p-blog-list__inner" href="blog_detail.html">
+            <div class="p-blog-list__pic">
+              <img src="" alt="">
+            </div>
+            <div class="p-blog-list__body">
+              <h3 class="p-blog-list__title">
+                <span class="p-blog-list__title-zh"></span>
+                <span class="p-blog-list__title-en"></span>
+              </h3>
+              <p class="p-blog-list__intro"></p>
+              <a href="blog_detail.html" class="p-blog-list__link">MORE</a>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </main>
+
+    <%- include('./layout/footer'); -%>
+    <script type="module" src="../main.js"></script>
+  </body>
+</html>
