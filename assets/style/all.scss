@@ -5,20 +5,23 @@
 @import './utils/variables';
 @import './utils/mixin';
 @import './base/reset';
-@import './utils/helpers';
+// @import './utils/helpers';
 @import './utils/flex';
-@import './utils/typography';
-@import './utils/spacing';
+// @import './utils/typography';
+// @import './utils/spacing';
+
+@import './layout/header';
+@import './layout/footer';
+@import './layout/container';
 
 @import './components/card';
+@import './components/banner';
+@import './components/banner';
+@import './components/intro';
+@import './components/series';
+@import './components/cobrand';
+@import './components/customer';
+@import './components/contact';
 
-@import './pages/index.scss';
-@import './layout/header.scss';
-@import './layout/footer.scss';
-@import './pages/blogs.scss';
-@import './components/banner.scss';
-@import './components/intro.scss';
-@import './components/series.scss';
-@import './components/cobrand.scss';
-@import './components/customer.scss';
-@import './components/contact.scss';
+@import './pages/index';
+@import './pages/blogs';
