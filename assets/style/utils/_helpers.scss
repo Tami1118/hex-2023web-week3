@@ -1,6 +1,11 @@
 .page-frame{
   padding-top: 40px;
   padding-bottom: 64px;
+
+  @include pad{
+    padding-top: 96px;
+    padding-bottom: 80px;
+  }
 }
 
 .page-title {
@@ -9,8 +14,12 @@
   padding-left: 16px;
   border-left: 8px solid $primary;
   margin-bottom: 24px;
+  
+  @include pad{
+    font-size: 48px;
+    margin-bottom: 32px;
+  }
 }
-
 
 .btn{
   text-align: center;
