@@ -1,2 +1,22 @@
+.page-frame{
+  padding-top: 40px;
+  padding-bottom: 64px;
+}
+
+.page-title {
+  font-size: 24px;
+  font-weight: bold;
+  padding-left: 16px;
+  border-left: 8px solid $primary;
+  margin-bottom: 24px;
+}
 
 
+.btn{
+  text-align: center;
+  border: none;
+}
+
+.text-center{
+  text-align: center;
+}

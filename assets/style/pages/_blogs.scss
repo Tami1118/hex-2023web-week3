@@ -1,20 +1,8 @@
-.p-blog-frame {
-  padding-top: 40px;
-  padding-bottom: 64px;
-}
-
-.p-main__title {
-  font-size: 24px;
-  font-weight: bold;
-  padding-left: 16px;
-  border-left: 8px solid $primary;
-  margin-bottom: 24px;
-}
-
 .p-blog-card__group {
   display: flex;
   flex-direction: column;
   gap: 24px;
+  margin-bottom: 80px;
 }
 
 .p-blog-card {

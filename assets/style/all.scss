@@ -5,7 +5,7 @@
 @import './utils/variables';
 @import './utils/mixin';
 @import './base/reset';
-// @import './utils/helpers';
+@import './utils/helpers';
 @import './utils/flex';
 // @import './utils/typography';
 // @import './utils/spacing';
@@ -25,3 +25,5 @@
 
 @import './pages/index';
 @import './pages/blogs';
+@import './pages/faq';
+@import './pages/location';

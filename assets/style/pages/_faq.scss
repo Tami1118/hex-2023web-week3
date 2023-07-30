@@ -1,0 +1,24 @@
+.p-faq{
+  &__category{
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 24px;
+  }
+
+  &__group{
+    max-width: 856px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  &__question{
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+
+  &__answer{
+    text-align: justify;
+  }
+}
