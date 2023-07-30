@@ -1,37 +1,17 @@
-.location-filter {
+.filter {
   display: flex;
   align-items: center;
   margin-bottom: 24px;
   position: relative;
-  
-  @include pad{
+
+  @include pad {
     width: fit-content;
   }
 
-  &-label {
-    margin-right: 8px;
-  }
-
-  &-select{
-    padding: 6px 12px;
-    border: 1px solid $gray;
-    border-radius: 4px;
-    flex-grow: 1;
-  
-    /* 移除select原有的箭頭 */
-    appearance: none;
-    -moz-appearance: none;
-    -webkit-appearance: none;
-  
-    @include pad{
-      min-width: 304px;
-    }
-  }
-
-  &::after{
+  &::after {
     content: '';
     display: block;
-        
+
     /* 設定位置 */
     position: absolute;
     top: 0;
@@ -47,15 +27,36 @@
     border-width: 5px 5px 0 5px;
     border-color: #000000 transparent transparent transparent;
   }
+
+  &-label {
+    margin-right: 8px;
+  }
+
+  &-select {
+    font-size: 18px;
+    padding: 6px 12px;
+    border: 1px solid $gray;
+    flex-grow: 1;
+    color: $gray-dark;
+
+    /* 移除 select 原有的箭頭 */
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+
+    @include pad {
+      min-width: 304px;
+    }
+  }
 }
 
-.location-list {
+.store-list {
   display: flex;
   flex-wrap: wrap;
   gap: 24px;
 }
 
-.location-item {
+.store-item {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -70,19 +71,19 @@
   }
 }
 
-.location-item__pic {
+.store-item__pic {
   width: 100%;
   height: 224px;
   object-fit: cover;
   object-position: center;
 }
 
-.location-item__title {
+.store-item__title {
   font-size: 24px;
   padding: 6px 24px;
 }
 
-.location-item__info-list {
+.store-item__info-list {
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -90,7 +91,7 @@
   border-top: 1px solid $gray-light;
 }
 
-.location-item__info-item {
+.store-item__info-item {
   display: flex;
   font-size: 20px;
 
@@ -99,11 +100,11 @@
   }
 }
 
-.location-item__info-icon {
+.store-item__info-icon {
   margin-right: 10px;
 }
 
-.location-item__inner {
+.store-item__inner {
   padding: 16px;
   background-color: black;
   font-size: 20px;
@@ -112,5 +113,58 @@
 
   &:hover {
     background-color: $primary;
+  }
+}
+
+
+/* store-detail */
+.store-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  @include pc{
+    flex-direction: row;
+  }
+}
+
+.store-detail-item{
+  @include pad{
+    display: flex;
+    gap: 24px;
+  }
+  
+  @include pc{
+    width: 526px;
+    flex-shrink: 0;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  &__pic{
+    @include pad{
+      width: calc((100% - 24px) / 2);
+    }
+
+    @include pc{
+      width: 100%;
+    }
+  }
+
+  &__body{
+    border: 1px solid $gray;
+  }
+}
+
+.store-frame {
+  width: 100%;
+  height: 348px;
+
+  @include pad {
+    height: 414px;
+  }
+
+  @include pc{
+    height: auto;
   }
 }
