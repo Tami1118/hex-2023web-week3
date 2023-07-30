@@ -32,6 +32,9 @@
 }
 
 .header__menu-list{
+  display: flex;
+  flex-wrap: wrap;
+
   li~li{
     @include pad{
       margin-left: 64px;

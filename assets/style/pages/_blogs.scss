@@ -1,11 +1,11 @@
-.p-blog-card__group {
+.blog-card-group {
   display: flex;
   flex-direction: column;
   gap: 24px;
   margin-bottom: 80px;
 }
 
-.p-blog-card {
+.blog-card {
   display: flex;
   flex-direction: column;
   position: relative;
@@ -104,4 +104,23 @@
       display: block;
     }
   }
+}
+
+.blog-navbar{
+  background: $red-dark;
+  color: white;
+}
+
+.blog-nav{
+  display: flex;
+  justify-content: space-between;
+}
+
+.blog-nav__item:hover a{
+  color: $green-light;
+}
+
+.blog-nav__link{
+  padding-top: 12px;
+  padding-bottom: 12px;
 }

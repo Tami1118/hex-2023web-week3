@@ -6,21 +6,12 @@
 @import './utils/mixin';
 @import './base/reset';
 @import './utils/helpers';
-@import './utils/flex';
-// @import './utils/spacing';
 
 @import './layout/header';
 @import './layout/footer';
 @import './layout/container';
 
 @import './components/card';
-@import './components/banner';
-@import './components/banner';
-@import './components/intro';
-@import './components/series';
-@import './components/cobrand';
-@import './components/customer';
-@import './components/contact';
 
 @import './pages/index';
 @import './pages/blogs';

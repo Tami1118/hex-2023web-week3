@@ -19,3 +19,273 @@
     padding-bottom: 80px;
   }
 }
+
+/*banner*/
+.banner {
+  background: url('https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/home-header-sm.png?raw=true') no-repeat center center / cover;
+  @include pad {
+    background: url('https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/home-header.png?raw=true') no-repeat center center / cover;
+  }
+}
+
+.banner__frame {
+  /* 需設定高把高撐高，才能設定主軸及交錯軸 */
+  height: 396px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  @include pad {
+    height: 787px;
+  }
+}
+
+.banner__title {
+  font-size: 24px;
+  color: $red-dark;
+  font-weight: bold;
+  @include pad {
+    font-size: 64px;
+  }
+}
+
+.banner__slogan {
+  color: $red-dark;
+  order: -1;
+  @include pad {
+    font-size: 36px;
+  }
+}
+
+.banner__btn {
+  @include button($primary, white);
+  margin-top: 4px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-right: 12px;
+  padding-left: 12px;
+  font-size: 20px;
+}
+/*card*/
+[class$="card-list"]{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  @include pad{
+    justify-content: space-between;
+  }
+}
+
+[class$="card-item"]{
+  overflow: hidden;
+  @include pad{
+    width: calc((100% - 24px) / 2)
+  }
+  @include pc{
+    width: calc((100% - 24px * 3) / 4);
+  }
+}
+
+[class$="card-body"]{
+  display: flex;
+  flex-direction: column;
+}
+
+[class$="card-pic"]{
+  overflow: hidden;
+}
+
+
+
+/*cobrand*/
+.cobrand{
+  background: url('https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/index-bg-sm.png?raw=true') no-repeat center center / cover;
+}
+
+.cobrand__section-title{
+  color: white;
+}
+/*customer*/
+.comment__card-item{
+  border-radius: 4px;
+  box-shadow: 0 2px 6px #00000029;
+}
+
+.comment__card-body{
+  height: 205px;
+  padding: 16px;
+}
+
+.comment__card-pic{
+  max-height: 306px;
+}
+
+.comment__card-title{
+  margin-bottom: 8px;
+}
+
+.comment__card-content{
+  @include ellipsis(3);
+}
+
+.comment__card-time{
+  margin-top: auto;
+  color: $gray-dark;
+}
+/*intro*/
+.intro{
+  background-color: $secondary;
+}
+
+[class$="feature-item"]{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.intro__feature-list{
+  gap: 24px;
+
+  @include pad{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+.intro__feature-item:not(first-child){
+  margin-bottom: 32px;
+
+  @include pad{
+    margin-bottom: 0;
+  }
+}
+
+.intro__feature-item{
+  @include pad{
+    width: calc((100% - 24px)/ 2);
+  }
+  @include pc{
+    width: calc((100% - 24px * 3)/ 4);
+  }
+}
+
+.intro__feature-icon{
+  font-size: 84px;
+  color: $red-dark;
+  margin-bottom: 24px;
+}
+
+.intro__feature-title{
+  font-size: 24px;
+  font-weight: bold;
+  color: $red-dark;
+  margin-bottom: 8px;
+}
+/*series*/
+[class$="type-list"]{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @include pc{
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  li~li{
+    margin-top: 24px;
+    @include pc{
+      margin-top: 0;
+    }
+  }
+}
+
+[class$="type-item"]:hover{
+  img{
+    transform: scale(1.2);
+    transition: .5s ease-out;
+  }
+}
+
+[class$="type-pic"]{
+  overflow: hidden;
+}
+
+[class$="type-title"]{
+  text-align: center;
+  background-color: white;
+}
+
+[class$="type-link"]{
+  color: $primary;
+  font-size: 48px;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.series__type-item {
+  max-width: 336px;
+  @include pad{
+    max-width: 416px;
+  }
+}
+
+[class$="form-group"]{
+  display: flex;
+  flex-direction: column;
+}
+
+[class$="form-item"]{
+  display: flex;
+  flex-direction: column;
+}
+
+.contact {
+  background-color: $secondary;
+}
+
+.contact__frame{
+  max-width: 576px;
+  margin: 0 auto;
+}
+
+.contact__content{
+  margin-bottom: 24px;
+}
+
+.contact__form-group {
+  gap: 16px;
+  
+  label{
+    margin-bottom: 8px;
+  }
+  
+  input, textarea{
+    padding: 6px 12px;
+  }
+}
+
+.contact__form-item-checkbox{
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 48px;
+
+  label{
+    margin-left: 4px;
+  }
+}
+
+.contact__btn{
+  @include button($primary, white);
+  padding-top: 16px;
+  padding-bottom: 16px;
+  @include pad{
+    width: 50%;
+    margin: 0 auto;
+  }
+  @include pc{
+    width: 68%;
+  }
+}
+
