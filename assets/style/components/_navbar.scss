@@ -1,38 +1,39 @@
-.nav{
-  @include pad{
+.nav {
+  @include pad {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
-}
 
-.nav__list{
-  display: flex;
-  justify-content: space-between;
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 
-  li~li{
-    @include pad{
-      margin-left: 48px;
+    li~li {
+      @include pad {
+        margin-left: 48px;
+      }
     }
   }
-}
 
-.nav__item{
-  &:hover a{
-    color: $green-light;
-    font-weight: bold;
+  &__item {
+    &:hover a {
+      color: $green-light;
+      font-weight: bold;
+    }
   }
-}
 
-.nav__link{
-  padding-top: 12px;
-  padding-bottom: 12px;
-}
+  &__link {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
 
-.nav__icon{
-  display: none;
+  &__icon {
+    display: none;
 
-  @include pad{
-    display: block;
+    @include pad {
+      display: block;
+    }
   }
 }

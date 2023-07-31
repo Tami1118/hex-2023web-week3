@@ -1,15 +1,16 @@
-.tag{
-  &__list{
+.tag {
+  &__list {
     display: flex;
     flex-wrap: wrap;
+    column-gap: 16px;
+
+    @include pc {
+      column-gap: 24px;
+    }
   }
 
-  &__item{
+  &__item {
     font-weight: bold;
     color: $primary;
-  }
-
-  &__item:not(:last-child){
-    margin-right: 16px;
   }
 }

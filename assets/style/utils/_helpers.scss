@@ -1,3 +1,39 @@
+// mobile px-16 -> pad px-36 -> web no-px
+.container-main{
+  max-width: $container;
+  margin: 0 auto;
+  padding-left: 16px;
+  padding-right: 16px;
+
+  @include pad{
+    padding-left: 36px;
+    padding-right: 36px;
+  }
+
+  @include pc-lg{
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+// mobile no-px -> pad px-36 -> web no-px
+.container-full{
+  max-width: $container;
+  margin: 0 auto;
+  padding-left: 0;
+  padding-right: 0;
+  
+  @include pad{
+    padding-left: 36px;
+    padding-right: 36px;
+  }
+  
+  @include pc-lg{
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
 .page-frame{
   padding-top: 40px;
   padding-bottom: 64px;
@@ -21,9 +57,8 @@
   }
 }
 
-.btn{
-  text-align: center;
-  border: none;
+.u-flex{
+  display: flex;
 }
 
 .text-center{

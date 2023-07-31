@@ -46,7 +46,9 @@
   &__header {
     @include pad {
       margin-bottom: 4px;
-    };
+    }
+
+    ;
 
     @include pc {
       margin-bottom: 16px;
@@ -83,8 +85,10 @@
     @include pad {
       display: block;
       @include ellipsis(6);
-    };
-    
+    }
+
+    ;
+
     @include pc {
       font-size: 20px;
     }
@@ -107,78 +111,131 @@
 }
 
 /* blog-detail */
-.blog-navbar{
+.blog-detail {
+  padding-top: 8px;
+  padding-bottom: 64px;
+
+  @include pad {
+    padding-top: 16px;
+    padding-bottom: 80px;
+  }
+}
+
+.blog-navbar {
   background: $red-dark;
   color: white;
+  position: sticky;
+  top: 0;
 }
 
-.blog-breadcrumb{
-  margin-top: 16px;
-
-  @include pad{
-    margin-top: 8px;
-  }
-}
-
-.blog-tag{
-  margin-top: 8px;
-  margin-bottom: 8px;
-}
-
-.blog-detail-main{
-  @include pad{
+.blog-detail-main {
+  @include pad {
     display: flex;
-    justify-content: space-between;
   }
 }
 
-.blog-article{
-  @include pad{
-    width: calc((100% - 24px) / 4 * 3);
+.blog-article {
+  @include pad {
+    width: calc((100% - 24px) * .7);
+    margin-right: 24px;
   }
-}
 
-.blog-sidebar{
-  @include pad{
-    width: calc((100% - 24px) / 4);
-  }
-}
+  &__tag {
+    margin-top: 8px;
+    margin-bottom: 8px;
 
-.blog-article__title--zh{
-  font-size: 24px;
-  @include pad{
-    font-size: 48px;
+    @include pc {
+      font-size: 24px;
+    }
   }
-}
-.blog-article__title--en{
-  @include pad{
+
+  &__title--zh {
     font-size: 24px;
+
+    @include pad {
+      font-size: 48px;
+    }
+  }
+
+  &__title--en {
+    @include pad {
+      font-size: 24px;
+    }
   }
 }
 
-.blog-article__content{
-  p{
+.blog-article__content {
+  p {
     color: #555;
     text-align: justify;
   }
-  img{
+
+  img {
     margin-top: 16px;
     margin-bottom: 8px;
 
-    @include pad{
+    @include pad {
       margin-top: 24px;
       margin-bottom: 16px;
     }
   }
 }
 
-.blog-sidebar__title{
-  display: flex;
-  align-items: center;
-  color: $primary;
-  font-weight: bold;
+.blog-sidebar {
+  display: none;
+
+  @include pad {
+    display: block;
+    width: calc((100% - 24px) * .22);
+  }
+
+  @include pc {
+    width: calc((100% - 24px) * .15);
+  }
+
+  &__title {
+    display: flex;
+    align-items: center;
+    color: $primary;
+    font-weight: bold;
+  }
 }
 
-.blog-media__pic{
-  width: 24px;
+.blog-detail-bottom {
+  display: none;
+
+  @include pad {
+    display: block;
+    width: calc((100% - 24px) * .7);
+  }
+
+  @include pc {
+    width: 100%;
+  }
+}
+
+.blog-media {
+  display: flex;
+  margin-top: 40px;
+
+  span {
+    margin-right: 16px;
+  }
+
+  &__list {
+    display: flex;
+    gap: 16px;
+  }
+
+  &__pic {
+    width: 24px;
+  }
+}
+
+.blog-page {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 16px;
+  padding-top: 24px;
+  border-top: 1px solid $gray;
 }

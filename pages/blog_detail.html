@@ -12,7 +12,7 @@
   <%- include('./layout/header'); -%>
     <div class="blog-navbar">
       <div class="container-main">
-        <div class="blog-nav">
+        <div class="nav">
           <ul class="nav__list">
             <li class="nav__item"><a class="nav__link" href="#">最新消息</a></li>
             <li class="nav__item"><a class="nav__link" href="#">特別企劃</a></li>
@@ -24,23 +24,25 @@
       </div>
     </div>
 
-    <main>
+    <main class="blog-detail">
       <div class="container-main">
         <div class="blog-breadcrumb">
-          <ol class="breadcrumb__list">
-            <li class="breadcrumb__item"><a class="breadcrumb__link" href="#">首頁</a></li>
-            <li class="breadcrumb__item"><a class="breadcrumb__link" href="#">部落格</a></li>
-            <li class="breadcrumb__item"><a class="breadcrumb__link" href="#">特別企劃</a></li>
-            <li class="breadcrumb__item"><a class="breadcrumb__link" href="#">情人節特別企劃</a></li>
-          </ol>
+          <div class="breadcrumb">
+            <ol class="breadcrumb__list">
+              <li class="breadcrumb__item"><a class="breadcrumb__link" href="#">首頁</a></li>
+              <li class="breadcrumb__item"><a class="breadcrumb__link" href="#">部落格</a></li>
+              <li class="breadcrumb__item"><a class="breadcrumb__link" href="#">特別企劃</a></li>
+              <li class="breadcrumb__item"><a class="breadcrumb__link" href="#">情人節特別企劃</a></li>
+            </ol>
+          </div>
         </div>
-        <div class="blog-tag">
+        <div class="blog-article__tag">
           <ul class="tag__list">
             <li class="tag__item"><a class="tag__link" href="#">#special</a></li>
             <li class="tag__item"><a class="tag__link" href="#">#event</a></li>
           </ul>
         </div>
-
+        
         <div class="blog-detail-main">
           <article class="blog-article">
             <h2 class="blog-article__title">
@@ -58,7 +60,6 @@
               <p>2/14(五)-2/20(日)<br>至本店單筆消費滿2980元, 就送情人節限定眼鏡盒1個<br>期間優惠還有~~持他牌鏡框更換鏡片<br>薄型非球面鏡片折300元<br>濾藍光鏡片折500元<br>快快帶上另一半<br>讓彼此每一次睜開眼，都被愛的視線包圍!</p>
             </div>
           </article>
-
           <aside class="blog-sidebar">
             <div class="blog-sidebar__title">
               <span class="material-symbols-outlined">label</span>
@@ -84,16 +85,22 @@
               <li class="blog-media__item"><a class="blog-media__link" href="#"><img class="blog-media__pic" src="../assets/images/logo-instagram.png" alt=""></a></li>
             </ul>
           </div>
-
-
+          <div class="blog-page">
+            <a class="blog-page__link" href="#">
+              <span class="material-symbols-outlined">arrow_back</span>
+              <span>上一篇：街頭潮人訪問 1</span>
+            </a>
+            <a class="blog-page__link" href="#">
+              <span>下一篇：街頭潮人訪問 2</span>
+              <span class="material-symbols-outlined">arrow_forward</span>
+            </a>
+          </div>
         </div>
       </div>
-
-      
     </main>
 
     <%- include('./layout/footer'); -%>
-      <script type="module" src="../main.js"></script>
+    <script type="module" src="../main.js"></script>
 </body>
 
 </html>
