@@ -1,0 +1,19 @@
+.breadcrumb {
+  &__list {
+    display: flex;
+  }
+
+  &__item{
+    display: flex;
+  }
+
+  &__item:not(:last-child)::after {
+    content: '/';
+    margin-right: 4px;
+    margin-left: 4px;
+  }
+
+  &__item:last-child {
+    color: $primary;
+  }
+}

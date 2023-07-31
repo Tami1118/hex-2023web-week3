@@ -1,0 +1,15 @@
+.tag{
+  &__list{
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__item{
+    font-weight: bold;
+    color: $primary;
+  }
+
+  &__item:not(:last-child){
+    margin-right: 16px;
+  }
+}

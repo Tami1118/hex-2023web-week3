@@ -12,8 +12,11 @@
 @import './layout/container';
 
 @import './components/card';
+@import './components/navbar';
+@import './components/breadcrumb';
+@import './components/tag';
 
 @import './pages/index';
 @import './pages/blogs';
-@import './pages/faq';
 @import './pages/store';
+@import './pages/faq';
