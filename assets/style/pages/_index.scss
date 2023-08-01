@@ -1,4 +1,4 @@
-[class*="section__title"] {
+.section__title {
   font-size: 24px;
   font-weight: bold;
   color: $red-dark;
@@ -107,7 +107,10 @@
 
 /* cobrand */
 .cobrand {
-  background: url('/assets/images/index-bg-sm.png') no-repeat center center / cover;
+  background: url('/assets/images/index-bg-sm.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 
   h2 {
     color: white;
@@ -222,9 +225,11 @@
 
   &__item-checkbox {
     display: flex;
+    align-items: flex-start;
     gap: 4px;
     margin-bottom: 24px;
-    @include pad{
+
+    @include pad {
       margin-bottom: 48px;
     }
   }
@@ -233,6 +238,7 @@
 .contact__btn {
   @include button($primary, white);
   @include py-frame(16px, 16px);
+
   @include pad {
     width: 50%;
     margin: 0 auto;
