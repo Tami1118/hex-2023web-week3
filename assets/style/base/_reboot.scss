@@ -1,0 +1,38 @@
+*, *::after, *::before{
+  box-sizing: border-box;
+  // outline: 1px solid indigo;
+}
+
+body{
+  font-family: 'Roboto','Noto Sans TC', sans-serif;
+  line-height: 1.5;
+}
+
+a, button{
+	font-family: inherit;
+}
+
+a{
+	text-decoration: none;
+	color: inherit;
+	display: block;
+
+	&:hover{
+		cursor: pointer;
+	}
+}
+
+span{
+	display: inline-block;
+}
+
+img, svg, span, button{
+	vertical-align: middle;
+}
+
+img{
+	max-width: 100%;
+	height: auto;
+	object-fit: cover;
+	object-position: center;
+}

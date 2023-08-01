@@ -1,97 +1,111 @@
-.footer{
+.footer {
   background-color: $primary;
 
-  [class*="-item"]{
+  [class*="__item"] {
     color: white;
-    &:hover{
+
+    &:hover {
       color: $green-light;
     }
   }
 }
 
-.footer__top{
-  padding-top: 24px;
-  padding-bottom: 24px;
+.footer-top {
   border-bottom: 1px solid #fff;
-  display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
+  flex-direction: row;
   justify-content: space-between;
-  @include pad{
+
+  @include pad {
     flex-direction: column;
+    gap: 32px;
   }
 }
 
-.footer__top-nav{
-  order: 1;
-  display: flex;
-  justify-content: space-between;
-  @include pad{
-    order: -1;
-  }
-}
+.footer-nav {
+  &__group {
+    justify-content: space-between;
+    order: 1;
 
-.footer__nav-list{
-  display: none;
-  @include pad{
-    display: flex;
+    @include pad {
+      align-items: center;
+      order: -1;
+    }
   }
 
-  li~li{
-    @include pad{
-      margin-left: 48px;
+  &__list {
+    display: none;
+
+    @include pad {
+      display: flex;
+      gap: 48px;
+    }
+  }
+
+  &__link {
+    color: white;
+
+    &:hover {
+      color: $green-light;
     }
   }
 }
 
-.footer__social-list{
-  display: flex;
+.footer-social {
+  &__list {
+    gap: 16px;
 
-  li~li{
-    margin-left: 16px;
-    @include pad{
-      margin-left: 20px;
+    @include pad {
+      gap: 20px;
+    }
+  }
+
+  &__item {
+    width: 24px;
+
+    @include pad {
+      width: 40px;
     }
   }
 }
 
-.footer__social-item{
-  width: 24px;
-}
-
-.footer__info-list{
-  @include pad{
-    margin-top: 32px;
+.footer-info {
+  &__list {
+    flex-direction: column;
+    gap: 8px;
   }
 
-  li~li{
-    margin-top: 8px;
-  }
-}
-
-.footer__info-item{
-  display: flex;
-}
-
-.footer__info-link{
-  margin-left: 12px;
-  @include pad{
-    font-size: 36px;
-  }
-}
-
-.footer__info-icon{
-  font-size: 18px;
-  @include pad{
-    font-size: 36px;
-  }
-}
-
-.footer__bottom{
-  padding-top: 16px;
-  padding-bottom: 24px;
-  @include pad{
+  &__item {
     display: flex;
+    align-items: center;
+    gap: 12px;
+
+    @include pad {
+      gap: 20px;
+    }
+  }
+
+  &__link {
+    @include pad {
+      font-size: 36px;
+    }
+  }
+
+  &__icon {
+    font-size: 18px;
+
+    @include pad {
+      font-size: 36px;
+    }
+  }
+}
+
+.footer-bottom {
+  flex-direction: column;
+  gap: 8px;
+  
+  @include pad {
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
   }
@@ -101,18 +115,14 @@
   }
 }
 
-.footer__terms-list{
-  margin-top: 8px;
-  @include pad{
-    margin-top: 0;
-    display: flex;
-  }
+.footer-terms {
+  &__list {
+    flex-direction: column;
+    gap: 8px;
 
-  li~li{
-    margin-top: 8px;
-    @include pad{
-      margin-top: 0;
-      margin-left: 48px;
+    @include pad {
+      flex-direction: row;
+      gap: 48px;
     }
   }
 }

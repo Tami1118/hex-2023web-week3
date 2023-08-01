@@ -17,6 +17,16 @@
   }
 };
 
+@mixin py-frame($top, $bottom){
+  padding-top: $top;
+  padding-bottom: $bottom;
+}
+
+@mixin px-frame($left, $right){
+  padding-left: $left;
+  padding-right: $right;
+}
+
 
 @mixin button($background, $color) {
   background-color: $background;

@@ -1,66 +1,145 @@
-// mobile px-16 -> pad px-36 -> web no-px
-.container-main{
+/* container */
+/* mobile px-16 -> pad px-36 -> web no-px */
+.container-main {
   max-width: $container;
   margin: 0 auto;
-  padding-left: 16px;
-  padding-right: 16px;
+  @include px-frame(16px, 16px);
 
-  @include pad{
-    padding-left: 36px;
-    padding-right: 36px;
+  @include pad {
+    @include px-frame(36px, 36px);
   }
 
-  @include pc-lg{
-    padding-left: 0;
-    padding-right: 0;
+  @include pc-lg {
+    @include px-frame(0px, 0px);
   }
 }
 
-// mobile no-px -> pad px-36 -> web no-px
-.container-full{
+/* mobile no-px -> pad px-36 -> web no-px */
+.container-full {
   max-width: $container;
   margin: 0 auto;
-  padding-left: 0;
-  padding-right: 0;
-  
-  @include pad{
-    padding-left: 36px;
-    padding-right: 36px;
+  @include px-frame(0px, 0px);
+
+  @include pad {
+    @include px-frame(36px, 36px);
   }
-  
-  @include pc-lg{
-    padding-left: 0;
-    padding-right: 0;
+
+  @include pc-lg {
+    @include px-frame(0px, 0px);
   }
 }
 
-.page-frame{
-  padding-top: 40px;
-  padding-bottom: 64px;
 
-  @include pad{
-    padding-top: 96px;
-    padding-bottom: 80px;
+
+/* frame */
+.header-frame {
+  @include pad {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 }
 
+.footer-frame {
+  &-top {
+    @include py-frame(24px, 24px);
+
+    @include pad {
+      @include py-frame(64px, 64px);
+    }
+  }
+
+  &-bottom {
+    @include py-frame(16px, 16px);
+  
+    @include pad {
+      @include py-frame(32px, 32px);
+    }
+  }
+}
+
+.home-section-frame {
+  @include py-frame(40px, 40px);
+
+  @include pad {
+    @include py-frame(80px, 80px);
+  }
+}
+
+.page-frame {
+  @include py-frame(40px, 64px);
+
+  @include pad {
+    @include py-frame(96px, 80px);
+  }
+}
+
+.product-frame {
+  @include py-frame(40px, 40px);
+
+  @include pad {
+    @include py-frame(80px, 80px);
+  }
+}
+
+.blog-frame {
+  @include py-frame(8px, 64px);
+
+  @include pad {
+    @include py-frame(16px, 80px);
+  }
+}
+
+
+
+/* title */
 .page-title {
   font-size: 24px;
   font-weight: bold;
   padding-left: 16px;
   border-left: 8px solid $primary;
   margin-bottom: 24px;
-  
-  @include pad{
+
+  @include pad {
     font-size: 48px;
     margin-bottom: 32px;
   }
 }
 
-.u-flex{
+.series__title {
+  flex-direction: column-reverse;
+  text-align: center;
+  margin-bottom: 24px;
+
+  @include pad {
+    margin-bottom: 32px;
+  }
+
+  &-zh {
+    font-size: 24px;
+
+    @include pad {
+      font-size: 32px;
+    }
+  }
+
+  &-en {
+    font-size: 24px;
+    font-weight: 500;
+
+    @include pad {
+      font-size: 42px;
+    }
+  }
+}
+
+
+
+/* flex */
+.u-flex {
   display: flex;
 }
 
-.text-center{
-  text-align: center;
+.btn{
+  border: none;
 }

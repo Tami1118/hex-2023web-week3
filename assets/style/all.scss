@@ -1,22 +1,31 @@
-// typography, icon
+/* typography, icon */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,700,0,0');
 
+
+/* base, utils */
 @import './utils/variables';
 @import './utils/mixin';
 @import './base/reset';
+@import './base/reboot';
 @import './utils/helpers';
 
+
+/* layout */
 @import './layout/header';
 @import './layout/footer';
-@import './layout/container';
 
-@import './components/card';
-@import './components/navbar';
+
+/* components */
+@import './components/banner';
 @import './components/breadcrumb';
+@import './components/card';
+@import './components/navigation';
 @import './components/tag';
 
-// @import './pages/index';
+
+/* pages */
+@import './pages/index';
 @import './pages/product';
 @import './pages/blog';
 @import './pages/store';

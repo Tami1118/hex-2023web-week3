@@ -50,24 +50,25 @@
   }
 }
 
-.store-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 24px;
-}
-
-.store-item {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  border: 1px solid $gray-light;
-
-  @include pad {
-    width: calc((100% - 24px) / 2);
+.store {
+  &__list {
+    flex-wrap: wrap;
+    gap: 24px;
   }
 
-  @include pc {
-    width: calc((100% - 48px) / 3);
+  &__item {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid $gray-light;
+
+    @include pad {
+      width: calc((100% - 24px) / 2);
+    }
+
+    @include pc {
+      width: calc((100% - 48px) / 3);
+    }
   }
 
   &__pic {
@@ -76,10 +77,12 @@
     object-fit: cover;
     object-position: center;
   }
+
   &__title {
     font-size: 24px;
     padding: 6px 24px;
   }
+
   &__info-list {
     display: flex;
     flex-direction: column;
@@ -87,24 +90,27 @@
     padding: 16px 24px;
     border-top: 1px solid $gray-light;
   }
+
   &__info-item {
     display: flex;
     font-size: 20px;
-  
+
     &:hover a {
       color: $primary;
     }
   }
+
   &__info-icon {
     margin-right: 10px;
   }
-  &__inner {
+
+  &__link {
     padding: 16px;
     background-color: black;
     font-size: 20px;
     color: $white;
     text-align: center;
-  
+
     &:hover {
       background-color: $primary;
     }
@@ -113,44 +119,43 @@
 
 /* store-detail */
 .store-detail {
-  display: flex;
   flex-direction: column;
   gap: 24px;
 
-  @include pc{
+  @include pc {
     flex-direction: row;
   }
-}
 
-.store-detail-item{
-  @include pad{
-    display: flex;
-    gap: 24px;
-  }
-  
-  @include pc{
-    width: 526px;
-    flex-shrink: 0;
-    flex-direction: column;
-    gap: 0;
+  &__item {
+    @include pad {
+      display: flex;
+      gap: 24px;
+    }
+
+    @include pc {
+      width: 526px;
+      flex-shrink: 0;
+      flex-direction: column;
+      gap: 0;
+    }
   }
 
-  &__pic{
-    @include pad{
+  &__pic {
+    @include pad {
       width: calc((100% - 24px) / 2);
     }
 
-    @include pc{
+    @include pc {
       width: 100%;
     }
   }
 
-  &__body{
+  &__content {
     border: 1px solid $gray;
   }
 }
 
-.store-frame {
+.store__frame {
   width: 100%;
   height: 348px;
 
@@ -158,7 +163,7 @@
     height: 414px;
   }
 
-  @include pc{
+  @include pc {
     height: auto;
   }
 }

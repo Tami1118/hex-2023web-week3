@@ -1,18 +1,19 @@
-.blog-card-group {
-  display: flex;
+.blog-card__group {
   flex-direction: column;
   gap: 24px;
   margin-bottom: 80px;
 }
 
 .blog-card {
-  display: flex;
-  flex-direction: column;
-  position: relative;
+  &__item{
+    display: flex;
+    flex-direction: column;
+    position: relative;
 
-  @include pad {
-    flex-direction: row;
-    gap: 24px;
+    @include pad {
+      flex-direction: row;
+      gap: 24px;
+    }
   }
 
   /* a 連結覆蓋整個 card  */
@@ -25,10 +26,23 @@
     z-index: 1;
   }
 
-  &__pic {
-    object-fit: cover;
-    object-position: center;
+  /* a 連結pc時顯示 */
+  &__link-more {
+    display: none;
+    color: $red-dark;
+    font-size: 36px;
+    font-weight: bold;
+    letter-spacing: -2px;
+    width: fit-content;
+    margin-top: auto;
+    margin-left: auto;
 
+    @include pc {
+      display: block;
+    }
+  }
+
+  &__pic {
     @include pad {
       width: calc((100% - 24px) / 2);
     }
@@ -43,12 +57,10 @@
     }
   }
 
-  &__header {
+  &__content {
     @include pad {
       margin-bottom: 4px;
     }
-
-    ;
 
     @include pc {
       margin-bottom: 16px;
@@ -87,47 +99,14 @@
       @include ellipsis(6);
     }
 
-    ;
-
     @include pc {
       font-size: 20px;
     }
   }
 
-  &__link-more {
-    display: none;
-    color: $red-dark;
-    font-size: 36px;
-    font-weight: bold;
-    letter-spacing: -2px;
-    width: fit-content;
-    margin-top: auto;
-    margin-left: auto;
-
-    @include pc {
-      display: block;
-    }
-  }
 }
 
 /* blog-detail */
-.blog-detail {
-  padding-top: 8px;
-  padding-bottom: 64px;
-
-  @include pad {
-    padding-top: 16px;
-    padding-bottom: 80px;
-  }
-}
-
-.blog-navbar {
-  background: $red-dark;
-  color: white;
-  position: sticky;
-  top: 0;
-}
-
 .blog-detail-main {
   @include pad {
     display: flex;

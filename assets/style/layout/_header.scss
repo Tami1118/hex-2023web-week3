@@ -1,70 +1,61 @@
-.header{
+.header {
   background-color: $primary;
 }
 
-.header__frame{
-  @include pad{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-}
-
-.header__logo{
+.header-logo {
   padding: 16px;
 
-  @include pad{
+  @include pad {
     padding-left: 0;
   }
+
+  &__link { /* 設定 logo 作為背景圖片 */
+    width: 80px;
+    height: 48.57px;
+    background-image: url('https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/logo-white.png?raw=true');
+    background-size: cover;
+  }
+
+  &__replace { /* 圖片取代文字 */
+    text-indent: 101%;
+    white-space: nowrap;
+    overflow: hidden;
+  }
 }
 
-.header__logo-link{ /* 設定 logo 作為背景圖片 */
-  width: 80px;
-  height: 48.57px;
-  background-image: url('https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/logo-white.png?raw=true');
-  background-size: cover;
-}
-
-.header__logo-replace{ /* 圖片取代文字 */
-  text-indent: 101%;
-  white-space: nowrap;
-  overflow: hidden;
-}
-
-.header__menu-list{
-  display: flex;
-  flex-wrap: wrap;
-
-  li~li{
-    @include pad{
-      margin-left: 64px;
+.header-nav {
+  &__list {
+    flex-wrap: wrap;
+  
+    @include pad {
+      gap: 64px;
     }
   }
-}
 
-.header__menu-item{
-  width: 50%;
-  text-align: center;
-  color: $white;
-  border: .5px solid #fff;
+  &__item {
+    width: 50%;
+    text-align: center;
+    color: $white;
+    border: .5px solid #fff;
 
-  @include pad{
-    width: fit-content;
-    border: none;
-  }
+    @include pad {
+      width: fit-content;
+      border: none;
+    }
 
-  &:hover{
-    background: $red-dark;
-    font-weight: 700;
+    &:hover {
+      background: $red-dark;
+      font-weight: 700;
 
-    @include pad{
-      color: $green-light;
-      background: transparent;
+      @include pad {
+        color: $green-light;
+        background: transparent;
+      }
     }
   }
-}
 
-.header__menu-link{
-  padding-top: 12px;
-  padding-bottom: 12px;
+  &__link{
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
 }
