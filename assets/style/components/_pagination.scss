@@ -1,35 +1,32 @@
 .pagination {
-  &__nav {
-    display: flex;
-    justify-content: center;
-  }
-
   &__list {
     border: 1px solid $gray-dark;
+    margin: 0 auto;
   }
 
-  &__item:hover a {
-    color: $primary;
-    font-weight: blod;
-    background-color: $secondary;
-  }
-
-  &__item:not(:last-child) {
-    border-right: 1px solid $gray-dark;
-  }
-
-  &__item--active a {
-    color: white;
-    background-color: black;
-  }
-
-  &__item--able a {
-    color: black;
-    background-color: $gray-light;
+  &__item{
+    &:not(:last-child){
+      border-right: 1px solid $gray-dark;
+    }
+    &:hover a {
+      color: white;
+      font-weight: blod;
+      background-color: black;
+    }
   }
 
   &__link {
     padding: 12px 16px;
     color: $gray-dark;
+  }
+
+  &__item--active a {
+    color: white;
+    background-color: $primary;
+  }
+
+  &__item--able a {
+    color: black;
+    background-color: $gray-light;
   }
 }
