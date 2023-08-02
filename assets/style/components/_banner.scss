@@ -1,13 +1,14 @@
 /* home banner */
-.banner {
-  background: url('/assets/images/home-header-sm.png') no-repeat center center / cover;
+.banner-main {
+  @include banner-background;
+  background-image: url('/assets/images/home-header-sm.png');
 
   @include pad {
-    background: url('/assets/images/home-header.png') no-repeat center center / cover;
+    background-image: url('/assets/images/home-header.png');
   }
 }
 
-.banner-frame {
+.banner-content {
   /* 需設定高把高撐高，才能設定主軸及交錯軸 */
   height: 396px;
   flex-direction: column;

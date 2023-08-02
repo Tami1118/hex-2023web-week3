@@ -1,20 +1,13 @@
 .footer {
   background-color: $primary;
-
-  [class*="__item"] {
-    color: white;
-
-    &:hover {
-      color: $green-light;
-    }
-  }
+  @extend %link-hover
 }
 
 .footer-top {
-  border-bottom: 1px solid #fff;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-between;
+  border-bottom: 1px solid #fff;
 
   @include pad {
     flex-direction: column;
@@ -39,14 +32,6 @@
     @include pad {
       display: flex;
       gap: 48px;
-    }
-  }
-
-  &__link {
-    color: white;
-
-    &:hover {
-      color: $green-light;
     }
   }
 }
@@ -103,15 +88,12 @@
 .footer-bottom {
   flex-direction: column;
   gap: 8px;
+  color: white;
   
   @include pad {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-  }
-
-  span {
-    color: white;
   }
 }
 
