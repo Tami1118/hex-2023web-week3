@@ -3,14 +3,14 @@
 .container-main {
   max-width: $container;
   margin: 0 auto;
-  @include px-frame(16px, 16px);
+  @include px(16px, 16px);
 
   @include pad {
-    @include px-frame(36px, 36px);
+    @include px(36px, 36px);
   }
 
   @include pc-lg {
-    @include px-frame(0px, 0px);
+    @include px(0px, 0px);
   }
 }
 
@@ -18,47 +18,39 @@
 .container-full {
   max-width: $container;
   margin: 0 auto;
-  @include px-frame(0px, 0px);
+  @include px(0px, 0px);
 
   @include pad {
-    @include px-frame(36px, 36px);
+    @include px(36px, 36px);
   }
 
   @include pc-lg {
-    @include px-frame(0px, 0px);
+    @include px(0px, 0px);
   }
 }
 
 
 
-/* frame */
-.header-frame {
-  @include pad {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-}
-
-.footer-frame {
+/* wrap */
+.footer-wrap {
   &-top {
-    @include py-frame(24px, 24px);
+    @include py(24px, 24px);
 
     @include pad {
-      @include py-frame(64px, 64px);
+      @include py(64px, 64px);
     }
   }
 
   &-bottom {
-    @include py-frame(16px, 16px);
+    @include py(16px, 16px);
   
     @include pad {
-      @include py-frame(32px, 32px);
+      @include py(32px, 32px);
     }
   }
 }
 
-.home-section-frame {
+.home-section-wrap {
   @include py-frame(40px, 40px);
 
   @include pad {
@@ -66,23 +58,23 @@
   }
 }
 
-.page-frame {
-  @include py-frame(40px, 64px);
+.page-wrap {
+  @include py(40px, 64px);
 
   @include pad {
-    @include py-frame(96px, 80px);
+    @include py(96px, 80px);
   }
 }
 
-.product-frame {
-  @include py-frame(40px, 40px);
+.product-wrap {
+  @include py(40px, 40px);
 
   @include pad {
-    @include py-frame(80px, 80px);
+    @include py(80px, 80px);
   }
 }
 
-.blog-frame {
+.blog-wrap {
   @include py-frame(8px, 64px);
 
   @include pad {
@@ -93,7 +85,7 @@
 
 
 /* title */
-.page-title {
+.page__title {
   font-size: 24px;
   font-weight: bold;
   padding-left: 16px;
@@ -106,40 +98,9 @@
   }
 }
 
-.series__title {
-  flex-direction: column-reverse;
-  text-align: center;
-  margin-bottom: 24px;
-
-  @include pad {
-    margin-bottom: 32px;
-  }
-
-  &-zh {
-    font-size: 24px;
-
-    @include pad {
-      font-size: 32px;
-    }
-  }
-
-  &-en {
-    font-size: 24px;
-    font-weight: 500;
-
-    @include pad {
-      font-size: 42px;
-    }
-  }
-}
-
 
 
 /* flex */
 .u-flex {
   display: flex;
-}
-
-.btn{
-  border: none;
 }
