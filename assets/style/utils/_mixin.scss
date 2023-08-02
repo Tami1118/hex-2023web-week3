@@ -1,43 +1,78 @@
-// mobile first
+/* breakpoint(mobile first) */
 @mixin pad {
   @media(min-width: 767px) {
-    @content
+    @content;
   }
-};
+}
 
 @mixin pc {
   @media(min-width: 992px) {
-    @content
+    @content;
   }
-};
+}
 
-@mixin pc-lg{
-  @media(min-width: 1297px){
-    @content
+@mixin pc-lg {
+  @media(min-width: 1297px) {
+    @content;
   }
-};
+}
 
-@mixin py-frame($top, $bottom){
+
+
+/* spacing */
+@mixin py($top, $bottom) {
   padding-top: $top;
   padding-bottom: $bottom;
 }
 
-@mixin px-frame($left, $right){
+@mixin px($left, $right) {
   padding-left: $left;
   padding-right: $right;
 }
 
+@mixin my($top, $bottom) {
+  margin-top: $top;
+  margin-bottom: $bottom;
+}
+
+@mixin mx($left, $right) {
+  margin-left: $left;
+  margin-right: $right;
+}
+
+
+
+/* components */
+@mixin text-replace {
+  text-indent: 101%;
+  white-space: nowrap;
+  overflow: hidden;
+}
 
 @mixin button($background, $color) {
   background-color: $background;
   color: $color;
-  text-align: center;
-};
+}
 
 @mixin ellipsis($line) {
-  overflow:hidden;
+  overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: $line;
+}
+
+@mixin triangle($lz, $tz, $rz, $bz, $lc, $tc, $rc, $bc) {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: $lz $tz $rz $bz;
+  border-color: $lc $tc $rc $bc;
+}
+
+@mixin circle($size, $background) {
+  height: $size;
+  width: $size;
+  background-color: $background;
+  border-radius: 50%;
 }

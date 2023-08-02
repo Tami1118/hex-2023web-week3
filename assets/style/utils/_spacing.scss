@@ -64,31 +64,31 @@
 .pr-44{padding-right: 44px;}
 .pr-48{padding-right: 48px;}
 
-.py-4{padding-top: 4px; padding-bottom: 4px;}
-.py-8{padding-top: 8px; padding-bottom: 8px;}
-.py-12{padding-top: 12px; padding-bottom: 12px;}
-.py-16{padding-top: 16px; padding-bottom: 16px;}
-.py-20{padding-top: 20px; padding-bottom: 20px;}
-.py-24{padding-top: 24px; padding-bottom: 24px;}
-.py-28{padding-top: 28px; padding-bottom: 28px;}
-.py-32{padding-top: 32px; padding-bottom: 32px;}
-.py-36{padding-top: 36px; padding-bottom: 36px;}
-.py-40{padding-top: 40px; padding-bottom: 40px;}
-.py-44{padding-top: 44px; padding-bottom: 44px;}
-.py-48{padding-top: 48px; padding-bottom: 48px;}
+.py-4{ @include py(4px,   4px);}
+.py-8{ @include py(8px,   8px);}
+.py-12{@include py(12px, 12px);}
+.py-16{@include py(16px, 16px);}
+.py-20{@include py(20px, 20px);}
+.py-24{@include py(24px, 24px);}
+.py-28{@include py(28px, 28px);}
+.py-32{@include py(32px, 32px);}
+.py-36{@include py(36px, 36px);}
+.py-40{@include py(40px, 40px);}
+.py-44{@include py(44px, 44px);}
+.py-48{@include py(48px, 48px);}
 
-.px-4{padding-left: 4px; padding-right: 4px;}
-.px-8{padding-left: 8px; padding-right: 8px;}
-.px-12{padding-left: 12px; padding-right: 12px;}
-.px-16{padding-left: 16px; padding-right: 16px;}
-.px-20{padding-left: 20px; padding-right: 20px;}
-.px-24{padding-left: 24px; padding-right: 24px;}
-.px-28{padding-left: 28px; padding-right: 28px;}
-.px-32{padding-left: 32px; padding-right: 32px;}
-.px-36{padding-left: 36px; padding-right: 36px;}
-.px-40{padding-left: 40px; padding-right: 40px;}
-.px-44{padding-left: 44px; padding-right: 44px;}
-.px-48{padding-left: 48px; padding-right: 48px;}
+.px-4{ @include px(4px,   4px);}
+.px-8{ @include px(8px,   8px);}
+.px-12{@include px(12px, 12px);}
+.px-16{@include px(16px, 16px);}
+.px-20{@include px(20px, 20px);}
+.px-24{@include px(24px, 24px);}
+.px-28{@include px(28px, 28px);}
+.px-32{@include px(32px, 32px);}
+.px-36{@include px(36px, 36px);}
+.px-40{@include px(40px, 40px);}
+.px-44{@include px(44px, 44px);}
+.px-48{@include px(48px, 48px);}
 
 
 // margin 
@@ -160,32 +160,29 @@
 .mr-44{margin-right: 44px;}
 .mr-48{margin-right: 48px;}
 
-.my-4{margin-top: 4px; margin-bottom: 4px;}
-.my-8{margin-top: 8px; margin-bottom: 8px;}
-.my-12{margin-top: 12px; margin-bottom: 12px;}
-.my-16{margin-top: 16px; margin-bottom: 16px;}
-.my-20{margin-top: 20px; margin-bottom: 20px;}
-.my-24{margin-top: 24px; margin-bottom: 24px;}
-.my-28{margin-top: 28px; margin-bottom: 28px;}
-.my-32{margin-top: 32px; margin-bottom: 32px;}
-.my-36{margin-top: 36px; margin-bottom: 36px;}
-.my-40{margin-top: 40px; margin-bottom: 40px;}
-.my-44{margin-top: 44px; margin-bottom: 44px;}
-.my-48{margin-top: 48px; margin-bottom: 48px;}
 
-.mx-4{margin-left: 4px; margin-right: 4px;}
-.mx-8{margin-left: 8px; margin-right: 8px;}
-.mx-12{margin-left: 12px; margin-right: 12px;}
-.mx-16{margin-left: 16px; margin-right: 16px;}
-.mx-20{margin-left: 20px; margin-right: 20px;}
-.mx-24{margin-left: 24px; margin-right: 24px;}
-.mx-28{margin-left: 28px; margin-right: 28px;}
-.mx-32{margin-left: 32px; margin-right: 32px;}
-.mx-36{margin-left: 36px; margin-right: 36px;}
-.mx-40{margin-left: 40px; margin-right: 40px;}
-.mx-44{margin-left: 44px; margin-right: 44px;}
-.mx-48{margin-left: 48px; margin-right: 48px;}
+.my-4{ @include my(4px,   4px);}
+.my-8{ @include my(8px,   8px);}
+.my-12{@include my(12px, 12px);}
+.my-16{@include my(16px, 16px);}
+.my-20{@include my(20px, 20px);}
+.my-24{@include my(24px, 24px);}
+.my-28{@include my(28px, 28px);}
+.my-32{@include my(32px, 32px);}
+.my-36{@include my(36px, 36px);}
+.my-40{@include my(40px, 40px);}
+.my-44{@include my(44px, 44px);}
+.my-48{@include my(48px, 48px);}
 
-.border-b-1{
-  border-bottom: 1px solid white;
-}
+.mx-4{ @include mx(4px,   4px);}
+.mx-8{ @include mx(8px,   8px);}
+.mx-12{@include mx(12px, 12px);}
+.mx-16{@include mx(16px, 16px);}
+.mx-20{@include mx(20px, 20px);}
+.mx-24{@include mx(24px, 24px);}
+.mx-28{@include mx(28px, 28px);}
+.mx-32{@include mx(32px, 32px);}
+.mx-36{@include mx(36px, 36px);}
+.mx-40{@include mx(40px, 40px);}
+.mx-44{@include mx(44px, 44px);}
+.mx-48{@include mx(48px, 48px);}

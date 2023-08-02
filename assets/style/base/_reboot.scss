@@ -1,37 +1,53 @@
-*, *::after, *::before{
-  box-sizing: border-box;
-  // outline: 1px solid indigo;
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
 }
 
-body{
-  font-family: 'Roboto','Noto Sans TC', sans-serif;
-  line-height: 1.5;
+body {
+	font-family: 'Roboto', 'Noto Sans TC', sans-serif;
+	line-height: 1.5;
 }
 
-a, button{
+a,
+button {
 	font-family: inherit;
 }
 
-a{
+a {
 	text-decoration: none;
 	color: inherit;
 	display: block;
+
+	&:hover {
+		cursor: pointer;
+	}
+}
+
+button{
+	border: none;
+	text-align: center;
+	color: inherit;
 
 	&:hover{
 		cursor: pointer;
 	}
 }
 
-span{
+span {
 	display: inline-block;
 }
 
-img, svg, span, button{
+img,
+svg,
+span,
+button {
 	vertical-align: middle;
 }
 
-img{
-	max-width: 100%;
+img {
+	// max-width: 100%;
+	width: 100%;
 	height: auto;
 	object-fit: cover;
 	object-position: center;
