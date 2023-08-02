@@ -51,10 +51,10 @@
 }
 
 .home-section-wrap {
-  @include py-frame(40px, 40px);
+  @include py(40px, 40px);
 
   @include pad {
-    @include py-frame(80px, 80px);
+    @include py(80px, 80px);
   }
 }
 
@@ -75,16 +75,29 @@
 }
 
 .blog-wrap {
-  @include py-frame(8px, 64px);
+  @include py(8px, 64px);
 
   @include pad {
-    @include py-frame(16px, 80px);
+    @include py(16px, 80px);
   }
 }
 
 
 
 /* title */
+.section__title {
+  font-size: 24px;
+  font-weight: bold;
+  color: $red-dark;
+  text-align: center;
+  margin-bottom: 24px;
+
+  @include pad {
+    font-size: 48px;
+    margin-bottom: 48px;
+  }
+}
+
 .page__title {
   font-size: 24px;
   font-weight: bold;

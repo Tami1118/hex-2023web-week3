@@ -1,6 +1,6 @@
 /* home banner */
 .banner-main {
-  @include banner-background;
+  @extend %banner-background;
   background-image: url('/assets/images/home-header-sm.png');
 
   @include pad {
@@ -20,34 +20,6 @@
   }
 }
 
-.banner {
-  &__title {
-    font-size: 24px;
-    font-weight: bold;
-    color: $red-dark;
-
-    @include pad {
-      font-size: 64px;
-    }
-  }
-
-  &__slogan {
-    color: $red-dark;
-    order: -1;
-
-    @include pad {
-      font-size: 36px;
-    }
-  }
-
-  &__btn {
-    @include button($primary, white);
-    font-size: 20px;
-    padding: 6px 12px;
-    margin-top: 4px;
-  }
-}
-
 
 
 /* page banner */
@@ -61,10 +33,7 @@
   &__item {
     height: 136px;
     width: 50%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-
+    @extend %banner-background;
     @include pad {
       height: 296px;
     }
