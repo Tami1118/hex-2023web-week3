@@ -1,11 +1,11 @@
-.blog-card__group {
-  flex-direction: column;
-  gap: 24px;
-  margin-bottom: 80px;
-}
-
 .blog-card {
-  &__item{
+  &__group {
+    flex-direction: column;
+    gap: 24px;
+    margin-bottom: 80px;
+  }
+
+  &__item {
     display: flex;
     flex-direction: column;
     position: relative;
@@ -81,11 +81,11 @@
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-  }
 
-  &__en {
-    @include pc {
-      font-size: 20px;
+    &-en {
+      @include pc {
+        font-size: 20px;
+      }
     }
   }
 
@@ -103,7 +103,6 @@
       font-size: 20px;
     }
   }
-
 }
 
 /* blog-detail */
@@ -120,9 +119,7 @@
   }
 
   &__tag {
-    margin-top: 8px;
-    margin-bottom: 8px;
-
+    @include my(8px, 8px);
     @include pc {
       font-size: 24px;
     }
@@ -150,12 +147,9 @@
   }
 
   img {
-    margin-top: 16px;
-    margin-bottom: 8px;
-
+    @include my(16px, 8px);
     @include pad {
-      margin-top: 24px;
-      margin-bottom: 16px;
+      @include my(24px, 16px);
     }
   }
 }
@@ -173,7 +167,6 @@
   }
 
   &__title {
-    display: flex;
     align-items: center;
     color: $primary;
     font-weight: bold;
@@ -194,7 +187,6 @@
 }
 
 .blog-media {
-  display: flex;
   margin-top: 40px;
 
   span {
@@ -202,7 +194,6 @@
   }
 
   &__list {
-    display: flex;
     gap: 16px;
   }
 
@@ -212,7 +203,6 @@
 }
 
 .blog-page {
-  display: flex;
   justify-content: space-between;
   margin-top: 16px;
   padding-top: 24px;
